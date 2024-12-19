@@ -1,0 +1,1282 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+/* Global Styles */
+body {
+    font-family: 'Lora', serif;
+    background-color: #f3efe3;
+    color: #5c4637;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+#section-1 {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url('../img/bgawal.jpeg');
+}
+
+.konten {
+    position: relative; 
+    z-index: 10;
+    padding: 20px; 
+}
+
+.ornament {
+    position: absolute;
+    width: 50vw; 
+    height: auto; 
+}
+
+.pos-tl {
+    top: 5%; 
+    left: 5%; 
+}
+
+.pos-tr {
+    top: 5%; 
+    right: 5%; 
+}
+
+.pos-bl {
+    bottom: 5%; 
+    left: 5%; 
+}
+
+.pos-br {
+    bottom: 5%; 
+    right: 5%; 
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s forwards; 
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1; 
+    }
+}
+
+button {
+    padding: 15px 30px;
+    background-color: #8b5d33;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px; 
+}
+
+@media (max-width: 768px) {
+    .ornament {
+        width: 20vw; 
+    }
+}
+
+@media (max-width: 480px) {
+    .ornament {
+        width: 25vw; 
+    }
+    
+    #section-1 {
+        height: auto; 
+        padding: 20px; 
+    }
+    
+    .konten {
+        padding: 10px; 
+    }
+    
+    button {
+        padding: 10px 20px; 
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.section {
+    padding: 40px 20px;
+    margin: 0;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-image: url('../img/bgawal.jpeg');
+    border-bottom: 4px solid #e3ccb3;
+}
+
+#section-2 {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    margin: 50px auto;
+    max-width: 900px;
+}
+
+h2 {
+    font-size: 36px;
+    color: black;
+    margin-bottom: 30px;
+}
+
+.quote-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.quote-text {
+    font-size: 18px;
+    color: black;
+    line-height: 1.8;
+}
+
+.quote-text em {
+    font-size: 22px;
+    color: black;
+    display: block;
+    margin-bottom: 20px;
+    font-style: normal;
+}
+
+.quote-container:hover {
+    background-color: rgba(255, 255, 255, 1);
+    transform: translateY(-10px);
+}
+
+@media (max-width: 768px) {
+    .quote-text {
+        font-size: 16px;
+    }
+}
+
+h2 {
+    font-size: 30px;
+}
+
+@media (max-width: 768px) {
+    .quotes-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .quote-text {
+        font-size: 1rem;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.quote-container {
+    animation: slideIn 0.5s forwards;
+}
+
+.navbar-container {
+    width: 100%;
+    background-color: #f7f7f7;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: transparent;
+    font-family: 'Playfair Display', serif;
+    flex-wrap: wrap; /* Membungkus item ke baris baru jika perlu */
+}
+
+.navbar a {
+    flex: 1; /* Setiap link akan mengambil ruang yang sama */
+    text-align: center; /* Sejajarkan teks di tengah */
+    color: black;
+    text-decoration: none;
+    padding: 8px 0; /* Padding atas dan bawah */
+    font-size: 14px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    border-radius: 5px;
+    margin: 0 5px; /* Spasi antar link */
+}
+
+.navbar a:hover {
+    color: #fff;
+    background-color: #333;
+}
+
+.navbar a:active {
+    transform: scale(0.95);
+}
+
+/* Responsivitas Navbar untuk layar kecil */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 5px;
+    }
+
+    .navbar a {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar a {
+        font-size: 10px; /* Ukuran font lebih kecil untuk layar sangat kecil */
+    }
+}
+
+/* Konten Section 1 */
+#section-1 {
+    background-image: url('../img/bgawal.jpeg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    color: white;
+}
+
+/* Konten Animasi */
+.konten h1,
+.konten h2 {
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.konten h1.fade-in,
+.konten h2.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Button Styles */
+button {
+    padding: 15px 30px;
+    background-color: #8b5d33;
+    color: #fff;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #6a4525;
+}
+
+/* Ornament Styles */
+.pos-tl,
+.pos-tr,
+.pos-bl,
+.pos-br {
+    position: absolute;
+    width: 80px;
+    animation: float 3s ease-in-out infinite;
+}
+
+.pos-tl {
+    top: 20px;
+    left: 20px;
+}
+
+/* Top left */
+.pos-tr {
+    top: 20px;
+    right: 20px;
+}
+
+/* Top right */
+.pos-bl {
+    bottom: 20px;
+    left: 20px;
+}
+
+/* Bottom left */
+.pos-br {
+    bottom: 20px;
+    right: 20px;
+}
+
+/* Bottom right */
+
+#section-3::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+}
+
+/* Floating Ornament */
+.floating-ornament {
+    width: 30px;
+    height: 30px;
+    background-image: url('assets/img/bandornament.png');
+    background-size: cover;
+    position: absolute;
+    bottom: -50px;
+    animation: float 15s infinite ease-in-out;
+    z-index: 1;
+    opacity: 0.7;
+}
+
+
+
+.floating-ornament:nth-child(1) {
+    left: 100%;
+    animation-duration: 10s;
+    animation-delay: 0s;
+}
+
+.floating-ornament:nth-child(2) {
+    left: 100%;
+    animation-duration: 12s;
+    animation-delay: 2s;
+}
+
+.floating-ornament:nth-child(3) {
+    left: 150%;
+    animation-duration: 14s;
+    animation-delay: 4s;
+}
+
+/* Styling untuk section Profil Pengantin */
+#section-3 {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    margin: 50px auto;
+    max-width: 900px;
+}
+
+h2 {
+    font-size: 36px;
+    color: black;
+    margin-bottom: 30px;
+}
+
+/* Container untuk semua profil pengantin */
+.profil-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Container untuk masing-masing pengantin */
+.pengantin {
+    text-align: center;
+    margin: 20px;
+    transition: transform 0.4s ease;
+    max-width: 300px;
+    flex: 1 1 200px;
+}
+
+/* Styling untuk gambar dan teks pengantin */
+.pengantin-img-container {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.pengantin-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Styling untuk teks pengantin */
+.pengantin-text {
+    font-size: 18px;
+    color: black;
+    margin: 0;
+}
+
+/* Styling untuk ikon Instagram */
+.instagram-icon {
+    width: 40px;
+    height: 40px;
+    margin-top: 10px;
+    transition: transform 0.4s ease;
+}
+
+/* Responsivitas untuk profil pengantin */
+@media (max-width: 768px) {
+    .profil-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pengantin {
+        max-width: 100%;
+    }
+
+    .pengantin-text {
+        font-size: 16px;
+    }
+}
+
+/* Container untuk Galeri */
+.gallery-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Styling untuk Video */
+.video-container {
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 40px;
+}
+
+video {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+video:hover {
+    transform: scale(1.02);
+}
+
+/* Styling untuk Galeri Gambar */
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
+}
+
+.gallery-item {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsivitas untuk galeri gambar */
+@media (max-width: 768px) {
+    .image-gallery {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .image-gallery {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .video-container {
+        max-width: 100%;
+    }
+}
+
+#section-4 {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#section-4 h2 {
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 20px;
+    font-family: 'Playfair Display', serif;
+}
+
+#section-4 p {
+    font-size: 1.2rem;
+    color: white;
+    margin: 10px 0;
+    line-height: 1.5;
+}
+
+/* Responsivitas */
+@media (max-width: 768px) {
+    #section-4 h2 {
+        font-size: 2rem;
+    }
+
+    #section-4 p {
+        font-size: 1rem;
+    }
+}
+
+.maps-link {
+    display: inline-block;
+    margin-top: 15px;
+    font-size: 1.1rem;
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    padding: 10px 15px;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+}
+
+.maps-link:hover {
+    text-decoration: underline;
+    background-color: #f0f8ff;
+}
+
+.map-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 768px) {
+    #section-4 {
+        padding: 20px;
+    }
+
+    #section-4 h2 {
+        font-size: 2rem;
+    }
+
+    #section-4 p {
+        font-size: 1rem;
+    }
+
+    .maps-link {
+        font-size: 1rem;
+    }
+}
+
+#kotak-musik {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+#tombol-musik {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+#tombol-musik:hover {
+    transform: rotate(360deg);
+}
+
+#kontrol {
+    width: 30px;
+    height: auto;
+}
+
+table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    width: 80%;
+}
+
+th,
+td {
+    border: 1px solid #5c4637;
+    padding: 10px;
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: 40px 10px;
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+
+    #kotak-musik {
+        bottom: 10px;
+        right: 10px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translatey(0px);
+    }
+
+    50% {
+        transform: translatey(-10px);
+    }
+
+    100% {
+        transform: translatey(0px);
+    }
+}
+* {
+    box-sizing: border-box; 
+}
+
+.rsvp-section {
+    background-image: url('../img/bgawal.jpeg');
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.rsvp-section h2 {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    text-align: left;
+    color: white; 
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 2px solid saddlebrown;
+    border-radius: 5px;
+    font-size: 1rem; 
+    color: black; 
+}
+
+.radio-group,
+.checkbox-group {
+    text-align: left;
+    margin-top: 10px;
+    display: flex; 
+    flex-direction: column; 
+    align-items: flex-start; 
+}
+
+button {
+    padding: 10px 20px;
+    background-color: saddlebrown;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #5c3c1f;
+}
+
+.result {
+    margin-top: 20px;
+    text-align: left;
+    color: white; 
+}
+
+@media (max-width: 768px) {
+    .rsvp-section {
+        padding: 15px;
+    }
+
+    .rsvp-section h2 {
+        font-size: 1.5rem;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+
+* {
+    box-sizing: border-box; 
+}
+
+.thank-you-section {
+    padding: 20px;
+    background-image: url('../img/bgawal.jpeg');
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 20px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.thank-you-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-image: url('../img/bgawal.jpeg');
+    border-radius: 8px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.thank-you-section h2 {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.thank-you-text {
+    font-size: 1.125rem; 
+    color: white;
+}
+
+.thank-you-section:hover {
+    transform: scale(1.02);
+    background-color: #f1f1f1;
+}
+
+@media (max-width: 768px) {
+    .thank-you-section {
+        padding: 15px;
+        margin: 15px;
+    }
+
+    .thank-you-container {
+        padding: 15px;
+    }
+
+    .thank-you-section h2 {
+        font-size: 1.8rem; 
+    }
+
+    .thank-you-text {
+        font-size: 1rem; 
+    }
+}
+
+@media (max-width: 480px) {
+    .thank-you-section {
+        padding: 10px;
+    }
+
+    .thank-you-section h2 {
+        font-size: 1.6rem; 
+    }
+
+    .thank-you-text {
+        font-size: 0.875rem; 
+    }
+}
+
+.message-section {
+    background-image: url(../img/bgawal.jpeg);
+    padding: 40px 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.message-section h2 {
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.message-list h3 {
+    text-align: left;
+    margin-bottom: 10px;
+    color: white;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid saddlebrown;
+    border-radius: 5px;
+    resize: none;
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: saddlebrown;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: #5c3c1f;
+}
+
+.message-list {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.message-item {
+    background-color: #fff;
+    border: 1px solid saddlebrown;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 600px) {
+    .message-section {
+        padding: 20px 10px;
+    }
+
+    .message-section h2 {
+        font-size: 2rem;
+    }
+
+    input[type="text"],
+    textarea {
+        font-size: 0.9rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+    }
+}
+.event-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-image: url('../img/bgawal.jpeg');
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    text-align: center; 
+    transition: background-color 0.3s ease; 
+}
+
+.event-container:hover {
+    background-image: url('../img/bgawal.jpeg');
+}
+
+.event-container h2 {
+    font-size: 20px; 
+    color: white; 
+}
+
+.event-container p {
+    font-size: 16px; 
+    color: white; 
+}
+
+.event-container a {
+    display: inline-block; 
+    margin-top: 20px; 
+    padding: 10px 15px; 
+    background-color: #007BFF; 
+    color: white; 
+    text-decoration: none; 
+    border-radius: 4px; 
+    font-size: 14px; 
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transisi untuk hover */
+}
+
+.event-container a:hover {
+    background-color: #0056b3; 
+    transform: translateY(-2px); /* Efek naik sedikit saat hover */
+}
+
+@media (max-width: 480px) {
+    .event-container {
+        max-width: 95%; 
+        padding: 10px; 
+        margin: 10px auto; 
+    }
+    
+    .event-container h2 {
+        font-size: 20px; 
+    }
+    
+    .event-container p {
+        font-size: 14px; 
+    }
+    
+    .event-container a {
+        padding: 10px 20px; 
+        font-size: 12px; 
+    }
+}
+
+.map-container {
+    position: relative;
+    padding-bottom: 30%; 
+    height: 0;
+    overflow: hidden;
+    max-width: 50%;
+    max-height: 300px; 
+    background: #f0f0f0;
+    border-radius: 8px; 
+    margin-top: 20px; 
+    transition: background-color 0.3s ease; 
+}
+
+.map-container:hover {
+    background-image: url('../img/bgawal.jpeg'); 
+}
+
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+@media (max-width: 600px) {
+    .map-container {
+        padding-bottom: 40%; /* Menjaga proporsi di layar kecil */
+        max-height: 250px; /* Batas tinggi lebih kecil di layar kecil */
+    }
+}
+
+.gifts-section {
+    background-image: url(../img/bgawal.jpeg);
+    padding: 40px 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.gifts-section h2 {
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.gifts-options {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.gift-option {
+    width: 300px;
+    margin: 20px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.qr-code {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.copy-container {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.copy-container input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid saddlebrown;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.copy-container button {
+    padding: 10px 20px;
+    background-color: saddlebrown;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.copy-container button:hover {
+    background-color: #5c3c1f;
+}
+
+@media (max-width: 768px) {
+    .gifts-options {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gift-option {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .copy-container input {
+        width: 100%;
+    }
+
+    .copy-container button {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .gifts-section h2 {
+        font-size: 2rem;
+    }
+
+    .gift-option {
+        padding: 15px;
+    }
+
+    .qr-code {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gifts-section {
+        padding: 20px 10px;
+    }
+
+    .gifts-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .gift-option {
+        margin: 10px;
+    }
+
+    .qr-code {
+        width: 80px;
+        height: 80px;
+    }
+}
+.story-container {
+    margin: 0;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s ease, background-color 0.4s ease;
+}
+
+.story-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.story-img {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    transition: transform 0.4s ease;
+}
+
+.story-img:hover {
+    transform: scale(1.05);
+}
+
+.story-container:hover {
+    background-color: rgba(255, 255, 255, 1);
+    transform: translateY(-10px);
+}
+
+@media (min-width: 768px) {
+    .story-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .story-img {
+        width: 48%;
+        margin-right: 20px;
+    }
+
+    .story-content p {
+        width: 48%;
+        text-align: justify;
+    }
+}
+
+#special-guests {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    margin: 50px auto;
+    max-width: 900px;
+    background-image: url('../img/bgawal.jpeg');
+}
+
+h2 {
+    font-size: 36px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    h2 {
+        font-size: 28px;
+    }
+
+    .story-container {
+        padding: 15px;
+    }
+
+    .story-content p {
+        font-size: 16px;
+    }
+}
+/* Container untuk tabel tamu spesial */
+.guests-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease, background-color 0.4s ease;
+}
+
+/* Tabel styling */
+.guests-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #f2f2f2;
+}
+
+.guests-table th,
+.guests-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    font-size: 18px;
+}
+
+.guests-table th {
+    background-color: #f2f2f2;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Hover effect untuk baris tamu */
+.guests-table tr:hover {
+    background-color: rgba(240, 240, 240, 1);
+    transition: background-color 0.3s ease;
+}
+
+/* Transisi untuk container saat di-hover */
+.guests-container:hover {
+    background-color: rgba(255, 255, 255, 1);
+    transform: translateY(-10px);
+    /* Container naik sedikit */
+}
+
+/* Responsivitas */
+@media (max-width: 768px) {
+
+    .guests-table th,
+    .guests-table td {
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+}
